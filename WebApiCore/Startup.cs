@@ -26,6 +26,7 @@ namespace WebApiCore
         {
             services.AddMvc();
             services.AddTransient<ICatalogo, Catalogo>();
+            services.AddTransient<IProduto, Produto>();
             
         }
 

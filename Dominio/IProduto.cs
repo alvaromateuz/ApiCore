@@ -4,9 +4,8 @@ using System.Text;
 
 namespace Dominio
 {
-    public interface ICatalogo
+    public interface IProduto
     {
-        string[] RetornaCatalogo();
-        string CriarCatalogo();
+        string RetornaProduto(int index);
     }
 }

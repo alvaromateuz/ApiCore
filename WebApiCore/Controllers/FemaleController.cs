@@ -14,17 +14,19 @@ namespace WebApiCore.Controllers
     {
 
         private ICatalogo _catalogo;
+        private IProduto _produto;
 
-        public FemaleController(ICatalogo catalogo)
+        public FemaleController(ICatalogo catalogo, IProduto produto)
         {
             _catalogo = catalogo;
+            _produto = produto;
         }
 
         // GET: api/Female
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            string[] catalog = _catalogo.RetornaCatalogo().Split(',');
+            string[] catalog = _catalogo.RetornaCatalogo();
             return new string[] { "Prada T-shirt", "Supreme Skirt" }.Concat(catalog);
         }
 
@@ -32,7 +34,7 @@ namespace WebApiCore.Controllers
         [HttpGet("{id}", Name = "Get")]
         public string Get(int id)
         {
-            return "value";
+            return _produto.RetornaProduto(id);
         }
         
         // POST: api/Female

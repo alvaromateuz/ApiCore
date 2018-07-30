@@ -4,9 +4,9 @@ namespace Dominio
 {
     public class Catalogo : ICatalogo
     {
-        public string RetornaCatalogo()
+        public string[] RetornaCatalogo()
         {
-            return "camiseta, calça jeans, bota, sapato, jaqueta, tênis";
+            return new string[] { "camiseta", "calça jeans", "bota", "sapato", "jaqueta", "tênis" };
         }
 
         public string CriarCatalogo()
