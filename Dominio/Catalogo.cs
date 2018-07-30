@@ -6,7 +6,7 @@ namespace Dominio
     {
         public string RetornaCatalogo()
         {
-            return "camiseta, calça jeans, bota, sapato, jaqueta";
+            return "camiseta, calça jeans, bota, sapato, jaqueta, tênis";
         }
 
         public string CriarCatalogo()
