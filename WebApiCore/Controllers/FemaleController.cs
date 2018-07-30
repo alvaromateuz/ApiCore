@@ -27,7 +27,7 @@ namespace WebApiCore.Controllers
         public IEnumerable<string> Get()
         {
             string[] catalog = _catalogo.RetornaCatalogo();
-            return new string[] { "Prada T-shirt", "Supreme Skirt" }.Concat(catalog);
+            return new string[] { "Prada T-shirt", "Supreme Skirt", "Diesel Jeans" }.Concat(catalog);
         }
 
         // GET: api/Female/5
